@@ -1,0 +1,198 @@
+:root {
+  --bg: #111827;        /* Background utama */
+  --card: #1f2937;      /* Background card */
+  --input-bg: #111827; /* Background untuk input */
+  --text: #f9fafb;      /* Teks utama */
+  --muted: #9ca3af;     /* Teks sekunder */
+  --border: #374151;    /* Warna border */
+  --accent: #3b82f6;    /* Biru untuk tombol utama */
+  --danger: #ef4444;    /* Merah untuk delete */
+  --radius: 10px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0 0 8px;
+}
+
+.lead {
+  margin: 0;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+/* --- Tata Letak Form --- */
+
+.form-card .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="date"] {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 15px;
+  background: var(--input-bg);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    border-color: var(--accent);
+}
+
+input[type="text"] {
+    flex-grow: 1; /* Membuat input teks mengisi sisa ruang */
+}
+
+input::placeholder {
+  color: #6b7280;
+}
+
+.error {
+    color: var(--danger);
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+
+/* --- Tata Letak Tombol Filter --- */
+.filter-actions {
+    display: flex;
+    justify-content: space-between; /* Kunci untuk tata letak tombol */
+    margin-top: 5px;
+}
+
+/* --- Styling Tombol --- */
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+#add-btn {
+  background: var(--accent);
+  color: #fff;
+  font-size: 1.2em;
+  padding: 8px 16px;
+}
+
+#filter-btn {
+  background: #374151;
+  color: var(--text);
+}
+
+#clear-filters {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.delete-btn {
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#delete-all {
+  margin-top: 15px;
+  background: var(--danger);
+  color: #fff;
+}
+
+
+/* --- Daftar Tugas --- */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.todo-title {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.todo-date {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.muted {
+  color: var(--muted);
+  text-align: center;
+  padding: 20px;
+}
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 20px;
+}

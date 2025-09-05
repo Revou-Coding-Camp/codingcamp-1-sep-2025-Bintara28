@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simpel TDL</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Simpel TDL</h1>
+            <p class="lead">Welcome to Simpel TDL, a simple and efficient to-do list application.</p>
+        </header>
+
+        <section class="card form-card">
+            <h2>Add or Filter Tasks</h2>
+            <form id="todo-form" class="actions">
+                <div class="input-group">
+                    <input id="todo-input" type="text" placeholder="Add or search todo..." />
+                    <input id="date-input" type="date" />
+                    <button id="add-btn" type="submit" title="Add Task">+</button>
+                </div>
+                <small id="form-error" class="error" aria-live="polite"></small>
+                <div class="filter-actions">
+                    <button id="filter-btn" type="button">Filter</button>
+                    <button id="clear-filters" type="button">Clear</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card list-card">
+            <h2>Your tasks</h2>
+            <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+            <p id="empty-message" class="muted">No tasks yet. Add one above</p>
+            <button id="delete-all" type="button">Delete All</button>
+        </section>
+
+        <footer>
+            <small>Built for the SEFC To-Do mini project By Bin</small>
+        </footer>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
